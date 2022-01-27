@@ -30,7 +30,7 @@
     <h3>Primeiro, seu prato</h3>
     <div class="comida">
         
-        <div class="caixa-comida">    
+        <div id="comida1" class="caixa-comida" onclick="selecionarComida1()">    
             <img src="imgs/frango_yin_yang.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -39,7 +39,7 @@
             </div>
         </div>
         
-        <div class="caixa-comida">    
+        <div id="comida2" class="caixa-comida" onclick="selecionarComida2()">    
                 <img src="imgs/frango_yin_yang.svg" alt="prato de frango yin yang">
                 <div>
                     <p class="titulo">Nome da Comida</p>
@@ -48,7 +48,7 @@
                 </div>
         </div>
         
-        <div class="caixa-comida">    
+        <div id="comida3" class="caixa-comida" onclick="selecionarComida3()">    
                 <img src="imgs/frango_yin_yang.svg" alt="prato de frango yin yang">
                 <div>
                     <p class="titulo">Nome da Comida</p>
@@ -57,7 +57,7 @@
                 </div>
         </div> 
         
-        <div class="caixa-comida">    
+        <div id="comida4" class="caixa-comida" onclick="selecionarComida4()">    
                 <img src="imgs/frango_yin_yang.svg" alt="prato de frango yin yang">
                 <div>
                     <p class="titulo">Nome da Comida</p>
@@ -73,7 +73,7 @@
     <h3>Agora, sua bebida</h3>
     <div class="comida">
         
-        <div class="caixa-comida">    
+        <div id="bebida1" class="caixa-comida" onclick="selecionarBebida1()">    
             <img src="imgs/coquinha_gelada.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -82,7 +82,7 @@
             </div>
         </div>
         
-        <div class="caixa-comida">    
+        <div id="bebida2" class="caixa-comida" onclick="selecionarBebida2()">    
             <img src="imgs/coquinha_gelada.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -91,7 +91,7 @@
             </div>
         </div> 
 
-        <div class="caixa-comida">    
+        <div id="bebida3" class="caixa-comida" onclick="selecionarBebida3()">    
             <img src="imgs/coquinha_gelada.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -100,7 +100,7 @@
             </div>
         </div> 
 
-        <div class="caixa-comida">    
+        <div id="bebida4" class="caixa-comida" onclick="selecionarBebida4()">    
             <img src="imgs/coquinha_gelada.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -116,7 +116,7 @@
     <h3>Agora, sua bebida</h3>
     <div class="comida margem-bottom-fixada">
         
-        <div class="caixa-comida">    
+        <div id="sobremesa1" class="caixa-comida" onclick="selecionarSobremesa1()">    
             <img src="imgs/pudim.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -125,7 +125,7 @@
             </div>
         </div>
         
-        <div class="caixa-comida">    
+        <div id="sobremesa2" class="caixa-comida" onclick="selecionarSobremesa2()">    
             <img src="imgs/pudim.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -134,7 +134,7 @@
             </div>
         </div> 
 
-        <div class="caixa-comida">    
+        <div id="sobremesa3" class="caixa-comida" onclick="selecionarSobremesa3()">    
             <img src="imgs/pudim.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -143,7 +143,7 @@
             </div>
         </div> 
 
-        <div class="caixa-comida">    
+        <div id="sobremesa4" class="caixa-comida" onclick="selecionarSobremesa4()">    
             <img src="imgs/pudim.svg" alt="prato de frango yin yang">
             <div>
                 <p class="titulo">Nome da Comida</p>
@@ -157,12 +157,15 @@
     
     <!-- BOTTOM FIXADO -->
     <footer>
-        <div>
+        <button>
             <p>Selecione os 3 itens para fechar o pedido</p>
-        </div>
+        </button>
     </footer>
     <!-- FIM BOTTOM FIXADO -->
 
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

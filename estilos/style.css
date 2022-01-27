@@ -118,12 +118,13 @@ footer {
     bottom: 0;
 }
 
-footer div {
+footer button {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #CBCBCB;
+    border-style: hidden;
     border-radius: 50px;
     width: 364px;
     height: 61px;
