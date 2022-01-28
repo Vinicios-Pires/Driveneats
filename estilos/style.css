@@ -84,6 +84,12 @@ h3 {
     margin: 18px 14px 0px 14px;
 }
 
+.caixa-comida .img-comida {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
 .marquinha {
     position: absolute;
     color: #32B72F;
