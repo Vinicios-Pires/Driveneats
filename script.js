@@ -1,12 +1,8 @@
 let comida = false;
 let bebida = false;
 let sobremesa = false;
-let nomeComida;
-let nomeBebida;
-let nomeSobremesa;
-let precoComida;
-let precoBebida;
-let precoSobremesa;
+let nomeComida, nomeBebida, nomeSobremesa;
+let precoComida, precoBebida, precoSobremesa;
 
 // COMIDA
 function selecionarComida(item) {
@@ -56,6 +52,15 @@ function selecionarComida(item) {
     const nome = document.querySelector(".comida .selecionado .titulo")
     nomeComida = nome.innerHTML
     precoComida = preco.innerHTML
+
+
+    let textoComida = document.querySelector(".compras .produto-e-preco .produto-comida");
+    textoComida.innerHTML = nomeComida
+
+    let precoComida1 = document.querySelector(".compras .produto-e-preco .preco-comida");
+    precoComida1.innerHTML = precoComida;
+
+
     comida = true;
     mudarBotao()
 }
@@ -107,6 +112,15 @@ function selecionarBebida(item) {
     const nome = document.querySelector(".drinks .selecionado .titulo")
     nomeBebida = nome.innerHTML
     precoBebida = preco.innerHTML
+
+
+    let textoBebida = document.querySelector(".compras .produto-e-preco .produto-bebida");
+    textoBebida.innerHTML = nomeBebida;
+
+    let precoBebida1 = document.querySelector(".compras .produto-e-preco .preco-bebida");
+    precoBebida1.innerHTML = precoBebida;
+
+
     bebida = true;
     mudarBotao()
 }
@@ -160,6 +174,15 @@ function selecionarSobremesa(item) {
     const nome = document.querySelector(".sobremesa .selecionado .titulo")
     nomeSobremesa = nome.innerHTML
     precoSobremesa = preco.innerHTML
+
+
+    let textoSobremesa = document.querySelector(".compras .produto-e-preco .produto-sobremesa");
+    textoSobremesa.innerHTML = nomeSobremesa;
+
+    let precoSobremesa1 = document.querySelector(".compras .produto-e-preco .preco-sobremesa");
+    precoSobremesa1.innerHTML = nomeSobremesa;
+
+
     sobremesa = true;
     mudarBotao()
 }
@@ -173,18 +196,38 @@ function mudarBotao(){
     }
 }
 
+function telaConfirmacao(){
+    const telaConfirmacao = document.querySelector(".pop-up-pai");
+    telaConfirmacao.classList.add("display-flex")
+}
+
+
+function cancelarPedido() {
+    const cancelar = document.querySelector(".pop-up-pai");
+    cancelar.classList.remove("display-flex")
+}
+
+
 function wpp(){
     let valorComida = parseFloat(precoComida.replace("R$", "").replace(",", "."));
     let valorBebida = parseFloat(precoBebida.replace("R$", "").replace(",", "."));
     let valorSobremesa = parseFloat(precoSobremesa.replace("R$", "").replace(",", "."));
+    let nomePessoa = prompt("Qual seu nome?");
+    let endereco = prompt("Digite seu endereço");
 
     total = valorComida + valorBebida + valorSobremesa;
+
+    let textoPrecoTotal = document.querySelector(".compras .total .preco-total");
+    textoPrecoTotal.innerHTML = "R$" + total.toFixed(2);
 
     let wpp = encodeURIComponent(`Olá, gostaria de fazer o pedido:
     -Prato: ${nomeComida}
     -Bebida: ${nomeBebida}
     -Sobremesa: ${nomeSobremesa}
-    Total: R$ ${total.toFixed(2)}`);
+    Total: R$ ${total.toFixed(2)}
+    
+    Nome: ${nomePessoa}
+    Endereço: ${endereco}`);
 
     window.open(`https://wa.me/5514981996853?text=${wpp}`);
 

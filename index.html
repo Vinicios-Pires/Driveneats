@@ -191,12 +191,32 @@
     </div>
     <!-- SOBREMESA -->   
     
+    <div class="pop-up-pai">
+        <div class="pop-up">
+            <div class="confirme-pedido">
+                Confirme seu pedido
+            </div>
+            <div class="compras">
+                <div class="produto-e-preco"><span class="produto-comida"></span><span class="preco-comida"></span></div>
+                <div class="produto-e-preco"><span class="produto-bebida"></span><span class="preco-bebida"></span></div>
+                <div class="produto-e-preco"><span class="produto-sobremesa"></span><span class="preco-sobremesa"></span></div>
+                <div class="produto-e-preco total"><span>TOTAL</span><span class="preco-total"></span></div>
+            </div>
+            <button onclick="wpp()" class="finalizado">
+                Tudo certo, pode pedir!
+            </button>
+            <button onclick="cancelarPedido()" class="cancelar">
+                <span>Cancelar</span>
+            </button>
+        </div>
+    </div>
+
     <!-- BOTTOM FIXADO -->
     <footer>
         <button class="nao-fechado">
             <p>Selecione os 3 itens para fechar o pedido</p>
         </button>
-        <button class="fechado" onclick="wpp()">
+        <button class="fechado" onclick="telaConfirmacao()">
             <p>Fechar pedido</p>
         </button>
     </footer>
