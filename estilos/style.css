@@ -23,6 +23,7 @@ header {
     position: sticky;
     height: auto;
     top: 0;
+    z-index: 2;
 }
 
 header div {
@@ -126,6 +127,7 @@ footer {
     margin-top: 31px;
     position: sticky;
     bottom: 0;
+    z-index: 2;
 }
 
 footer button {
@@ -133,11 +135,28 @@ footer button {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #CBCBCB;
     border-style: hidden;
     border-radius: 50px;
     width: 364px;
     height: 61px;
+}
+
+.nao-fechado {
+    background-color: #CBCBCB;
+    display: flex;
+}
+
+.fechado {
+    display: none;
+    background-color: #32B72F;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
 }
 
 footer p {
