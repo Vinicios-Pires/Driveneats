@@ -180,7 +180,7 @@ function selecionarSobremesa(item) {
     textoSobremesa.innerHTML = nomeSobremesa;
 
     let precoSobremesa1 = document.querySelector(".compras .produto-e-preco .preco-sobremesa");
-    precoSobremesa1.innerHTML = nomeSobremesa;
+    precoSobremesa1.innerHTML = precoSobremesa;
 
 
     sobremesa = true;
@@ -199,6 +199,7 @@ function mudarBotao(){
 function telaConfirmacao(){
     const telaConfirmacao = document.querySelector(".pop-up-pai");
     telaConfirmacao.classList.add("display-flex")
+    total();
 }
 
 
@@ -207,6 +208,16 @@ function cancelarPedido() {
     cancelar.classList.remove("display-flex")
 }
 
+function total(){
+    let valorComida = parseFloat(precoComida.replace("R$", "").replace(",", "."));
+    let valorBebida = parseFloat(precoBebida.replace("R$", "").replace(",", "."));
+    let valorSobremesa = parseFloat(precoSobremesa.replace("R$", "").replace(",", "."));
+    
+    totalValor = valorComida + valorBebida + valorSobremesa;
+    
+    let textoPrecoTotal = document.querySelector(".compras .total .preco-total");
+    textoPrecoTotal.innerHTML = "R$" + totalValor.toFixed(2);
+}
 
 function wpp(){
     let valorComida = parseFloat(precoComida.replace("R$", "").replace(",", "."));
@@ -216,9 +227,6 @@ function wpp(){
     let endereco = prompt("Digite seu endereço");
 
     total = valorComida + valorBebida + valorSobremesa;
-
-    let textoPrecoTotal = document.querySelector(".compras .total .preco-total");
-    textoPrecoTotal.innerHTML = "R$" + total.toFixed(2);
 
     let wpp = encodeURIComponent(`Olá, gostaria de fazer o pedido:
     -Prato: ${nomeComida}
